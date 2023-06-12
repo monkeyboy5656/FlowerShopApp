@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="529.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtest.WareHouseCustomerController">
+   <children>
+      <Label layoutX="300.0" layoutY="33.0" text="Warehouse products">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblProducts" layoutX="86.0" layoutY="127.0" prefHeight="295.0" prefWidth="638.0">
+        <columns>
+          <TableColumn fx:id="tcID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tcName" prefWidth="158.0" text="Name" />
+            <TableColumn fx:id="tcPrice" prefWidth="94.0" text="Price" />
+            <TableColumn fx:id="tcColor" prefWidth="112.0" text="Colour" />
+            <TableColumn fx:id="tcQuantity" prefWidth="84.0" text="Quantity" />
+            <TableColumn fx:id="tcType" prefWidth="114.0" text="Type" />
+        </columns>
+      </TableView>
+      <Button layoutX="87.0" layoutY="452.0" mnemonicParsing="false" onAction="#backToMenu" prefHeight="40.0" prefWidth="156.0" text="Back to Menu" />
+      <Button layoutX="569.0" layoutY="452.0" mnemonicParsing="false" onAction="#addToFavourites" prefHeight="40.0" prefWidth="156.0" text="Add to Favourites" />
+      <Button layoutX="329.0" layoutY="452.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="40.0" prefWidth="156.0" text="Add to Cart" />
+      <RadioButton fx:id="rbColor" layoutX="182.0" layoutY="98.0" mnemonicParsing="false" onAction="#colorSort" text="Color">
+         <toggleGroup>
+            <ToggleGroup fx:id="tgSort" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="rbPrice" layoutX="260.0" layoutY="98.0" mnemonicParsing="false" onAction="#priceSort" text="Price" toggleGroup="$tgSort" />
+      <RadioButton fx:id="rbType" layoutX="333.0" layoutY="98.0" mnemonicParsing="false" onAction="#typeSort" text="Type" toggleGroup="$tgSort" />
+      <Label layoutX="86.0" layoutY="98.0" text="Sort By:" />
+   </children>
+</AnchorPane>
